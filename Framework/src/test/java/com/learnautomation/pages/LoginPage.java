@@ -18,7 +18,7 @@ public class LoginPage {
 	
 	@FindBy(xpath="//a[@href='https://ui.cogmento.com/?lang=en']") WebElement loginLink;
 	
-	@FindBy(xpath="//input[@name='email1']") WebElement email;
+	@FindBy(xpath="//input[@name='email']") WebElement email;
 	
 	@FindBy(xpath="//input[@name='password']") WebElement pwd;
 	
