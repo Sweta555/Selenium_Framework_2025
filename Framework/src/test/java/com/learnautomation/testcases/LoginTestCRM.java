@@ -26,7 +26,8 @@ public class LoginTestCRM extends BaseClass {
 		loginPage.loginToCRM(excel.getStringData("Login",0 ,0), excel.getStringData("Login",0 ,1));
 			
 		logger.pass("Login Pass");
-		System.out.println("Testing a commit in github");
+		
+		System.out.println("Testing delete in github");
 	}
 	
 
