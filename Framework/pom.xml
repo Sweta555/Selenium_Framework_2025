@@ -43,7 +43,40 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.3</version>
 		</dependency>
+		
+		<dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <version>1.18.30</version> <!-- latest as of early 2024 -->
+  <scope>provided</scope>
+    </dependency>
 
 	</dependencies>
+	
+<build>
+
+
+<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.0</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>XML Files/${xmlFiles}</suiteXmlFile>
+          </suiteXmlFiles>
+          <systemPropertyVariables>
+          
+          <executionBrowser>${browser}</executionBrowser>
+          <appURL>${urlToBeTested}</appURL>
+          
+          </systemPropertyVariables>
+          
+        </configuration>
+      </plugin>
+      
+</plugins>
+
+</build>	
 
 </project>
